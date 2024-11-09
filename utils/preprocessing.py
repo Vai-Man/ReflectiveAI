@@ -4,7 +4,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-
+nltk.download('stopwords')
 stop_words = stopwords.words('english') 
 # better file handling needed
 with open('utils/data.pkl', 'rb') as f:
