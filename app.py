@@ -35,9 +35,9 @@ def app():
     mood = st.slider("How are you feeling today?", 0, 10, 5)
     mood_message = "neutral"
     if mood <= 3:
-        mood_message = "low"
+        mood_message = "bad"
     elif mood >= 8:
-        mood_message = "high"
+        mood_message = "good"
     
     st.write(f"Mood check-in: You feel {mood_message}.")
 
@@ -71,9 +71,9 @@ def app():
                 ]
                 # Mental Health Tip of the Day
                 tips = {
-                    'low': "Tip: Try taking a few deep breaths and focus on the present moment. Mindfulness can help calm your mind.",
+                    'bad': "Tip: Try taking a few deep breaths and focus on the present moment. Mindfulness can help calm your mind.",
                     'neutral': "Tip: Stay positive and active today. Small movements like stretching can improve your mood.",
-                    'high': "Tip: Keep spreading positivity! Consider sharing a kind word or doing something nice for someone else today."
+                    'good': "Tip: Keep spreading positivity! Consider sharing a kind word or doing something nice for someone else today."
                 }
 
                 mental_health_tip = tips.get(mood_message, "Tip: Remember, it's okay to take breaks and recharge when needed.")
