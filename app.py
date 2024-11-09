@@ -1,10 +1,9 @@
 import streamlit as st
 import pickle
 from utils.preprocessing import preprocess
-#from textblob import TextBlob
 from datetime import datetime
-import pandas as pd
 import random
+import pandas as pd
 import nltk
 nltk.download('stopwords')
 
@@ -22,7 +21,7 @@ def app():
 
     st.markdown("""
     <div style="text-align: center; background-color: #f0f8ff; padding: 20px;">
-        <p>Take a moment to reflect, and we'll provide support along the way.</p>
+        <p style="font-style: italic; font-weight: bold;  color: #555;">Take a moment to reflect, and we'll provide support along the way.</p>
         <p style="font-style: italic; color: #555;">Built for Hack-To-The-Future Hackathon</p>
     </div>
     """, unsafe_allow_html=True)
@@ -64,14 +63,6 @@ def app():
                     st.success("✅ Your text does not indicate any signs of self-harm.")
                     st.write("It’s wonderful that you’re reflecting on your thoughts! Consider talking to a friend or family member if you'd like to share more.")
                 
-                
-                st.markdown("### Daily Affirmation")
-                affirmation = "You are strong, capable, and deserving of happiness."
-                if mood <= 3:
-                    affirmation = "Every day is a fresh start. Take it one step at a time."
-                elif mood >= 8:
-                    affirmation = "Keep spreading your positivity! You’re an inspiration."
-
                 quotes = [
                     "The only way to do great work is to love what you do. - Steve Jobs",
                     "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
@@ -95,7 +86,6 @@ def app():
                 st.write(f"🌟 {daily_quote}")
 
                 
-                st.write(f"🌱 {affirmation}")
                 
                 # Coping Mechanism Links
                 st.markdown("#### Helpful Resources for Self-Care")
@@ -108,8 +98,6 @@ def app():
                     'mood': mood,
                     'input_text': input_text,
                     'prediction': prediction,
-                    'emotion': emotion,
-                    'affirmation': affirmation,
                 }
                 st.session_state.interaction_history.append(interaction_data)
             
@@ -133,7 +121,7 @@ def app():
     if st.session_state.interaction_history:
         st.markdown("### Your Previous Reflections")
         history_df = pd.DataFrame(st.session_state.interaction_history)
-        st.write(history_df[['timestamp', 'mood', 'emotion', 'prediction', 'affirmation']])
+        st.write(history_df[['timestamp', 'mood', 'prediction']])
 
 if __name__ == '__main__':
     app()

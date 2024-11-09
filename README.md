@@ -17,7 +17,6 @@ ReflectAI combines emotion analysis with personalized journaling prompts, mood t
 ## Features
 
 - **Mood Check-In**: Allows users to rate how they’re feeling, offering personalized affirmations based on their mood.
-- **Emotional Analysis**: Detects the emotional tone of user input using sentiment analysis, providing insights into their emotional state.
 - **Prediction Model**: Classifies user text into categories (like signs of self-harm) and suggests resources if necessary.
 - **Journal Prompts**: Encourages daily reflection with suggestions for positive thinking and emotional expression.
 - **Helpful Resources**: Provides users with links to mental health resources, such as meditation guides and breathing exercises.
@@ -27,14 +26,14 @@ ReflectAI combines emotion analysis with personalized journaling prompts, mood t
 
 - **Frontend**: Streamlit for a simple and clean interface.
 - **Backend**: Python for model integration and text processing.
-- **Machine Learning**: A pre-trained model for emotion classification and sentiment analysis using TextBlob and custom preprocessing.
-- **Libraries**: NLTK, TextBlob, Pandas, and others for NLP and data handling.
+- **Machine Learning**: A pre-trained model for emotion classification and sentiment analysis using custom preprocessing.
+- **Libraries**: NLTK, Pandas, and others for NLP and data handling.
 
 ## How to Run
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/reflectai.git
+   git clone https://github.com/Vai-Man/ReflectiveAI.git
    cd reflectai
    ```
 
