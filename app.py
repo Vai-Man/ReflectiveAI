@@ -1,11 +1,13 @@
 import streamlit as st
 import pickle
 from utils.preprocessing import preprocess
-from textblob import TextBlob
+#from textblob import TextBlob
 from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
+import nltk
+nltk.download('stopwords')
 
 with open('utils/best_model.pkl', 'rb') as f:
     model = pickle.load(f)
@@ -55,7 +57,7 @@ def app():
                 processed_array = preprocess(input_text)
                 prediction = model.predict(processed_array)[0]
                 
-                
+                """
                 sentiment = TextBlob(input_text).sentiment
                 if sentiment.polarity > 0.1:
                     emotion = "Positive 😊"
@@ -65,7 +67,7 @@ def app():
                     emotion = "Neutral 😐"
                 
                 st.write(f"Emotional Analysis: {emotion}")
-                
+                """
                 
                 if prediction == 'suicide':
                     st.markdown('<p style="color: #FF4C4C; font-size: 20px;">⚠️ This text might indicate self-harm. Please reach out to someone you trust or consult a mental health professional.</p>', unsafe_allow_html=True)
