@@ -2,11 +2,11 @@
 
 ReflectAI is an interactive chatbot designed to help users reflect on their thoughts and emotions, offering personalized emotional analysis and helpful mental health resources.
 
-## Jump to [Deployment](/mental-health-chatbot/README.md#how-to-run)
+## Jump to [Deployment](./README.md#how-to-run)
 
 ## Problem
 
-Mental health is often overlooked, and people may not always have a safe space to express their feelings. In moments of distress, having a simple way to reflect can make a difference. Many existing solutions focus on just one aspect, like providing resources, but do not personalize the experience or offer immediate support tailored to individual emotional states.
+Mental health is often overlooked, and people may not always have a safe space to express their feelings. In moments of distress, having a simple way to reflect can make a difference. Many existing solutions focus on just one aspect, like providing resources, but do not personalize the experience or offer immediate support tailored to individual emotional states.amlit.app
 
 ## Solution
 
